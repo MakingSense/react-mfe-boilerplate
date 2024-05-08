@@ -1,0 +1,15 @@
+# Generated version number for docker image
+wwwroot_extras/version.txt
+
+# Allow storing encrypted secrets only (SOPS)
+*.[sS]ecret.*
+**/[sS]ecret.*
+!*.[eE]ncrypted.[sS]ecret.*
+!**/[eE]ncrypted.[sS]ecret.*
+
+node_modules
+dist
+
+# OS files (OSX, Windows)
+.DS_Store
+Thumbs.db

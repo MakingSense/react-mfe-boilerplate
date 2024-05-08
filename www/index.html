@@ -1,0 +1,29 @@
+<!-- This file is only useful for run this project locally -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My React App</title>
+  </head>
+  <body>
+    <div id="root-apps" class="dp-library dp-wrapper">
+      <div id="react-mfe-boilerplate-root"></div>
+    </div>
+    <script src="https://cdn.fromdoppler.com/mfe-loader/loader-v2.1.0.js"></script>
+    <script>
+      window["style-guide-configuration"] = {
+        initFonts: true,
+        previewMode: false,
+      };
+      assetServices.load({
+        manifestURL:
+          "https://cdn.fromdoppler.com/doppler-style-guide/asset-manifest-v1.json",
+      });
+
+      window["react-mfe-boilerplate-configuration"] = {
+        useDummies: true,
+      };
+    </script>
+    <script src="/dist/index.js"></script>
+  </body>
+</html>
