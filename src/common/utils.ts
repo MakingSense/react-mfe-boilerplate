@@ -22,3 +22,5 @@ export const fireAndForget =
   (...args: TArgs) => {
     void fn(...args);
   };
+
+export const noop = () => {};

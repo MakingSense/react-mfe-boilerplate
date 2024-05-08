@@ -1,19 +1,17 @@
 import { StrictMode, useState } from "react";
 
-type FrontendFacade = {
-  demo: () => void;
-};
+import { FrontendFacade } from "./abstractions/FrontendFacade";
 
-export function App(): JSX.Element {
+export function App({
+  frontendFacade,
+}: {
+  frontendFacade: FrontendFacade;
+}): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
 
-  const frontendFacade: FrontendFacade = {
-    demo: () => {
-      setIsVisible(true);
-    },
+  frontendFacade.demo = () => {
+    setIsVisible(true);
   };
-
-  (window as any)["react-mfe-boilerplate"] = frontendFacade;
 
   return (
     <StrictMode>

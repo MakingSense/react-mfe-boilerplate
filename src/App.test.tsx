@@ -1,18 +1,24 @@
 import { act, render, screen } from "@testing-library/react";
 
+import { FrontendFacade } from "./abstractions/FrontendFacade";
 import { App } from "./App";
+import { noop } from "./common/utils";
 
 describe(App.name, () => {
   it("should render Hello content after calling demo()", () => {
     // Arrange
-    render(<App />);
+    const frontendFacade: FrontendFacade = {
+      demo: noop,
+    };
+
+    render(<App frontendFacade={frontendFacade} />);
 
     // Assert
     expect(screen.queryAllByText("Hello react-mfe-boilerplate!")).toEqual([]);
 
     // Act
     act(() => {
-      (window as any)["react-mfe-boilerplate"].demo();
+      frontendFacade.demo();
     });
 
     // Assert
