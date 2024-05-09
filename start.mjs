@@ -5,9 +5,10 @@ import { createServer, request } from "http";
 const publicPort = 1274;
 
 const define = {};
-for (const k in process.env) {
-  define[`process.env.${k}`] = JSON.stringify(process.env[k]);
-}
+// FIXME: commented because in Windows is not supported
+// for (const k in process.env) {
+//   define[`process.env.${k}`] = JSON.stringify(process.env[k]);
+// }
 
 const ctx = await context({
   entryPoints: ["src/index.tsx"],
