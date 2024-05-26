@@ -21,7 +21,7 @@
     "cspell": "8.8.3",
     "editorconfig-checker": "5.1.5",
     "esbuild": "0.21.4",
-    "eslint-config-love": "47.0.0",
+    "eslint-config-love": "50.0.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
     "esbuild-plugin-manifest": "1.0.3",
